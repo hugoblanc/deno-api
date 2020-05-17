@@ -1,8 +1,14 @@
 {
     "compilerOptions": {
-        {
-            "experimentalDecorators": true,
-            "emitDecoratorMetadata": true
-        }
-    }
+        "plugins": [
+            {
+                "name": "typescript-deno-plugin"
+            }
+        ],
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    "include": [
+        "./**/*.ts"
+    ]
 }
