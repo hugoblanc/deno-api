@@ -5,6 +5,6 @@ import { UserRepository } from '../repository/user.repository.ts';
 export class UserService {
     constructor(private userRepository: UserRepository) {}
     getAll() {
-        return this.userRepository.getAll();
+        return this.userRepository.find();
     }
 }
