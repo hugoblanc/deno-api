@@ -8,11 +8,12 @@ import { UserController } from './src/controller/user.controller.ts';
 })
 export class MainArea { }
 
+await initTypeORM();
+
 // Create alosaur application
 const app = new App({
     areas: [MainArea],
 });
 
-await initTypeORM();
 
 app.listen();

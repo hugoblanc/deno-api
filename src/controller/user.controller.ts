@@ -1,14 +1,25 @@
-import { Controller, Get, Area, App } from 'https://deno.land/x/alosaur/src/mod.ts';
+import * as log from "https://deno.land/std/log/mod.ts";
+import { Controller, Get } from 'https://deno.land/x/alosaur/src/mod.ts';
+import { User } from '../entities/user.entity.ts';
 import { UserService } from '../service/user.service.ts';
-
 
 @Controller('/users')
 export class UserController {
 
-    constructor(private userService:UserService){}
+    constructor(private userService: UserService) { }
 
-    @Get('')
-    getAll() {
-        return this.userService.getAll();
+    @Get()
+    async getAll() {
+        let users: User[];
+
+        try {
+            users = await this.userService.getAll();
+        } catch (error) {
+            log.error(JSON.stringify(error));
+            return error;
+        }
+
+        return users;
+
     }
 }
