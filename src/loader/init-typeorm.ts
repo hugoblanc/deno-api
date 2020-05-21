@@ -1,4 +1,5 @@
 import { createConnection } from 'https://denolib.com/denolib/typeorm@v0.2.23-rc3/mod.ts';
+import { User } from '../user/user.entity.ts';
 
 export function initTypeORM() {
 
@@ -10,7 +11,7 @@ export function initTypeORM() {
         password: "free",
         database: "postgres",
         entities: [
-            "entities/*.ts"
+            User
         ],
         synchronize: true,
     });
