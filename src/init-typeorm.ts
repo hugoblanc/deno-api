@@ -10,7 +10,7 @@ export function initTypeORM() {
         password: "free",
         database: "postgres",
         entities: [
-            "src/entities/*.ts"
+            "entities/*.ts"
         ],
         synchronize: true,
     });
