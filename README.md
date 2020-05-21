@@ -22,12 +22,10 @@ Use the deno runner:
 ```bash
 deno run --unstable --allow-net --config ./tsconfig.json src/main.ts
 ```
-We don't need the `--allow-read` flag if we specify explicitly entities in the `init-typeorm.ts` file.
+> We don't need the `--allow-read` flag if we explicitly specify entities in the `init-typeorm.ts` file.
 
 ## Usage
-
 Check the result : [http://localhost:8000/users](http://localhost:8000/users)
-
 
 ## License
 [MIT](https://choosealicense.com/licenses/mit/)
